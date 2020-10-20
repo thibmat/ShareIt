@@ -59,7 +59,7 @@ const uploadAndTranscode = async (path, fileName) => {
         path: reponse.data.url,
         name: reponse.data.name
     }
-    let reponse2 = await upload('/api/dbx/upload', variable2)
+    let reponse2 = await axios.post('/api/dbx/upload', variable2)
     return !!reponse2;
 }
 const upload = async (path, fileName) => {
